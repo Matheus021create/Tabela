@@ -1,0 +1,231 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0b3d91, #1e90ff);
+  color: #fff;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Containers principais */
+.container {
+  background: #ffffff10;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* Títulos */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Formulário */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"] {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Botões gerais */
+button {
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background-color: #00bfff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #009acd;
+}
+
+.logout {
+  background-color: #ff4d4d;
+}
+
+.logout:hover {
+  background-color: #e60000;
+}
+
+/* Tabelas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: white;
+  color: #333;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #003366;
+  color: white;
+}
+
+th, td {
+  padding: 12px 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+td[contenteditable="true"] {
+  background-color: #f0f8ff;
+}
+
+/* Botões dentro das tabelas */
+td button {
+  background-color: #dc3545;
+  padding: 5px 12px;
+  font-size: 13px;
+}
+
+td button:hover {
+  background-color: #b02a37;
+}
+
+/* Botões abaixo das tabelas */
+.botoes, .botoes-planeamento {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Planeamento */
+.scroll-horizontal {
+  overflow-x: auto;
+}
+
+/* Legenda */
+.legenda {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.legenda-item {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+}
+
+.legenda-item.treino {
+  background-color: #17a2b8;
+}
+
+.legenda-item.folga {
+  background-color: #6c757d;
+}
+
+.legenda-item.jogo {
+  background-color: #ffc107;
+  color: black;
+}
+
+.legenda-item.oficial {
+  background-color: #28a745;
+}
+
+/* Links */
+a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  table, thead, tbody, th, td, tr {
+    font-size: 14px;
+  }
+
+  .botoes, .botoes-planeamento {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* --- MODO ESCURO MANUAL --- */
+body.modo-escuro {
+  background: linear-gradient(135deg, #0a2540, #114477);
+  color: #fff;
+}
+
+body.modo-escuro .container {
+  background: #1a1a1a;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(255,255,255,0.05);
+}
+
+body.modo-escuro input[type="text"],
+body.modo-escuro input[type="password"] {
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.modo-escuro table {
+  background: #222;
+  color: #fff;
+}
+
+body.modo-escuro thead {
+  background-color: #004080;
+  color: #ffd700;
+}
+
+body.modo-escuro td[contenteditable="true"] {
+  background-color: #2c3e50;
+}
+
+body.modo-escuro td button {
+  background-color: #e63946;
+  color: #fff;
+}
+
+body.modo-escuro td button:hover {
+  background-color: #b02a37;
+}
+
+body.modo-escuro .legenda-item.folga { background-color: #495057; }
+body.modo-escuro .legenda-item.treino { background-color: #00bcd4; }
+body.modo-escuro .legenda-item.jogo { background-color: #ffc107; color: black; }
+body.modo-escuro .legenda-item.oficial { background-color: #28a745; }
+
+body.modo-escuro a {
+  color: #80ffff;
+}

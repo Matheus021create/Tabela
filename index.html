@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Valejas Atlético Clube - Horários</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- TELA REGISTRO -->
+  <div id="registroTela" class="container" style="display:none;">
+    <h1>Registrar Responsável</h1>
+    <div class="form-group">
+      <input type="text" id="novoUsuario" placeholder="Novo Usuário" />
+      <input type="password" id="novaSenha" placeholder="Nova Senha" />
+      <button onclick="registrar()">Registrar</button>
+      <div id="msgRegistro" class=""></div>
+      <p>Já tem conta? <a href="#" onclick="mostrarLogin()">Entrar</a></p>
+    </div>
+  </div>
+
+  <!-- TELA LOGIN -->
+  <div id="loginTela" class="container" style="display:none;">
+    <h1>Login do Responsável</h1>
+    <div class="form-group">
+      <input type="text" id="loginUsuario" placeholder="Usuário" />
+      <input type="password" id="loginSenha" placeholder="Senha" />
+      <button onclick="login()">Entrar</button>
+      <div id="msgLogin" class=""></div>
+      <p>Não tem conta? <a href="#" onclick="mostrarRegistro()">Registrar</a></p>
+    </div>
+  </div>
+
+  <!-- TELA PRINCIPAL -->
+  <div id="tabelaTela" class="container" style="display:none;">
+    <h1>Horários de Treino - Valejas Atlético Clube</h1>
+    <button onclick="alternarModo()" id="modoToggle" style="margin-bottom: 20px;">🌙 Ativar Modo Escuro</button>
+
+    <table id="horariosTabela">
+      <thead>
+        <tr>
+          <th>Dia</th>
+          <th>Categoria</th>
+          <th>Horário</th>
+          <th>Local</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Linhas carregadas via JS -->
+      </tbody>
+    </table>
+
+    <div class="botoes">
+      <button onclick="adicionarLinha()">➕ Adicionar Nova Linha</button>
+      <button onclick="salvarHorarios()">💾 Salvar Alterações</button>
+      <button onclick="limparTabela()">🧹 Limpar Tabela</button>
+      <button onclick="logout()" class="logout">Sair</button>
+    </div>
+
+    <section class="planeamento" style="margin-top: 40px;">
+      <h2>Planeamento Futsal Sénior B - Pré-Época 2025/2026</h2>
+      <div class="scroll-horizontal" style="overflow-x:auto;">
+        <table class="planeamento-tabela" border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Segunda</th>
+              <th>Terça</th>
+              <th>Quarta</th>
+              <th>Quinta</th>
+              <th>Sexta</th>
+              <th>Sábado</th>
+              <th>Domingo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Linhas carregadas via JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="botoes-planeamento">
+        <button onclick="adicionarLinhaPlaneamento()">➕ Adicionar Linha</button>
+        <button onclick="salvarPlaneamento()">💾 Salvar Alterações</button>
+        <button onclick="limparPlaneamento()">🧹 Limpar Tabela</button>
+      </div>
+
+      <div class="legenda" style="margin-top:10px;">
+        <span class="legenda-item treino">Treino</span>
+        <span class="legenda-item folga">Folga</span>
+        <span class="legenda-item jogo">Jogo Treino</span>
+        <span class="legenda-item oficial">Jogo Oficial</span>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
